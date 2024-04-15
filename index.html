@@ -18,11 +18,26 @@
             align-items: center;
             flex-direction: column;
         }
+
+        .alert{
+            background-color: rgba(152, 0, 0, 0.4);
+            font-size: 18px;
+            padding: 30px;
+            height: 150px;
+            text-align: center;
+            border-radius: 20px;
+            border: 0.5px solid rgba(255, 176, 176, 1);
+        }
     </style>
     <script src="https://cdn.socket.io/4.5.3/socket.io.min.js" integrity="sha384-WPFUvHkB1aHA5TDSZi6xtDgkF0wXJcIIxXhC6h8OT8EH3fC5PWro5pWJ1THjcfEi" crossorigin="anonymous" defer></script>
     <script src="script.js" defer></script>
 </head>
 <body>
+    <div class="alert">
+        <p><strong>Atenção</strong></p>
+        <p>Essa é uma versão inicial do cofe, nem todas as features estão disponíveis ainda.</p>
+        <p>O intervalo de troca de pessoas é de 3.0 segundos por motivos de teste.</p>
+    </div>
     <h1>Cofe ☕️</h1>
     <p><strong id="coffeeMaker">Alguém</strong> vai fazer nosso cafezinho hoje! 😃</p>
 
