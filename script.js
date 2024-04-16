@@ -23,9 +23,6 @@ document.getElementsByTagName("button")[0].addEventListener("click", () => {
 
         setTimeout(() => {
             alertElement.style.transform = "translateX(-250%)";
-            setTimeout(() => {
-                alertElement.style.display = "none"
-            }, 500);
         }, 5000);
     }, 300);
 })
@@ -48,8 +45,4 @@ document.getElementById("emojo").addEventListener("click", () => {
 document.getElementById("cancel").addEventListener("click", () => {
     const alertElement = document.getElementsByClassName("alert")[0];
     alertElement.style.transform = "translateX(-250%)";
-
-    setTimeout(() => {
-        alertElement.style.display = "none"
-    }, 300);
 })
