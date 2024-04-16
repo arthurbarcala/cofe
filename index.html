@@ -9,27 +9,54 @@
         body {
             background: linear-gradient(#000000, #9198e5);
             background-repeat: no-repeat;
-            height: 100%;
+            height: 100vh;
             color: white;
             font-family: "Dosis", sans-serif;
             font-size: 50px;
             display: flex;
-            justify-content: space-evenly;
+            justify-content: space-between;
             align-items: center;
             flex-direction: column;
         }
 
         .alert{
             background-color: rgba(152, 0, 0, 0.4);
-            font-size: 18px;
+            font-size: 14px;
             padding: 30px;
-            height: 100px;
+            height: 15%;
             text-align: center;
             border-radius: 20px;
             border: 0.5px solid rgba(255, 176, 176, 1);
+            position: absolute;
+            transform: translateX(0);
+            transition: transform 0.3s ease;
         }
+        
+        .alert-header{
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+
+        }
+
+        h3 {
+            width: 100%;
+        }
+
         #creditos {
             font-size: 20px;
+        }
+
+        #cancel {
+            background-color: rgba(255, 255, 255, 0.5);
+            padding: 5px;
+            border-radius: 20px;
+            transition: 0.2s ease;
+        }
+
+        #cancel:hover{
+            background-color: rgba(255, 255, 255, 0.8);
+            transition: 0.2s ease;
         }
     </style>
     <script src="https://cdn.socket.io/4.5.3/socket.io.min.js" integrity="sha384-WPFUvHkB1aHA5TDSZi6xtDgkF0wXJcIIxXhC6h8OT8EH3fC5PWro5pWJ1THjcfEi" crossorigin="anonymous" defer></script>
@@ -37,7 +64,10 @@
 </head>
 <body>
     <div class="alert">
-        <p><strong>Atenção</strong></p>
+        <div class="alert-header">
+            <div id="cancel">✖️</div>
+            <h3><strong>Atenção</strong></h3>  
+        </div>
         <p>O cofe ainda está em desenvolvimento. Provavelmente bugs serão encontrados, obrigado pela compreensão.</p>
     </div>
     <h1>Cofe ☕️</h1>
