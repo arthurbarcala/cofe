@@ -46,3 +46,8 @@ document.getElementById("cancel").addEventListener("click", () => {
     const alertElement = document.getElementsByClassName("alert")[0];
     alertElement.style.transform = "translateX(-250%)";
 })
+
+setInterval(() => {
+    socket.emit("connection")
+    console.log("emitted requisition")
+}, 600000)
