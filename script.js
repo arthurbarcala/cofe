@@ -48,6 +48,9 @@ document.getElementById("cancel").addEventListener("click", () => {
 })
 
 setInterval(() => {
-    socket.emit("connection")
-    console.log("emitted requisition")
+    fetch("https://cofe-api.onrender.com/api/healthcheck")
+    .then(response => response.json())
+    .then(data => console.log(data))
+    .catch(error => console.error("An error occured: " + error))
+    
 }, 600000)
